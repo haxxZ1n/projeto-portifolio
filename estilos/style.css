@@ -76,6 +76,7 @@ section#ficha img {
   width: 200px;
   aspect-ratio: 1/1;
   object-fit: cover;
+  overflow: hidden;
   border-radius: 50%;
   border: 5px solid var(--fundo-card);
   outline: 5px solid var(--destaque);
@@ -107,4 +108,78 @@ div#social a{
 
 div#social a:hover {
   color: var(--destaque-inverso);
+}
+
+section#detalhes {
+  grid-column: 2;
+
+}
+
+article {
+  background-color: var(--fundo-card);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+article h2 {
+  color: var(--destaque);
+  margin: 10px;
+}
+
+.video-conteiner {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  aspect-ratio: 16/9;
+}
+
+.video-conteiner iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+#skill-conteiner {
+  display: grid;
+  grid-column: 1fr;
+  gap: 30px;
+}
+
+#skill-conteiner .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#skill-conteiner .nome {
+  font-weight: bold;
+  color: var(--texto);
+}
+
+#skill-conteiner .porcent {
+  font-weight: bold;
+  color: var(--destaque);
+}
+
+#skill-conteiner .barra {
+  width: 100%;
+  height: 8px;
+  background-color: var(--fundo-principal);
+  border-radius: 4px;
+}
+
+#skill-conteiner .progresso {
+  height: 100%;
+  background-color: var(--destaque-inverso);
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 768px){
+  #skill-conteiner {
+    grid-template-columns: 2;
+  }
 }
